@@ -45,35 +45,28 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
     func enableDisableSaveButton () {
         if let toDoFieldCount = toDoField.text?.count, toDoFieldCount > 0 {
             saveBarButton.isEnabled = true
         } else {
             saveBarButton.isEnabled = false
-    }
-       
-        
-        
-        
-        
-        
-        
- @IBAction func toDoFieldChange(_ sender: UITextField) {
-        enableDisableSaveButton()
         }
-        
-    }
     
+    
+    @IBAction func toDoFieldChange(_ sender: UITextField) {
+        enableDisableSaveButton()
+    }
     
     @IBAction func cancelPressed(_ sender: UIBarButtonItem) {
         let isPresentingInAddMode = presentingViewController is UINavigationController
         if isPresentingInAddMode {
             dismiss(animated: true, completion: nil)
-        }else {
-            navigationController?.popViewController(animated: true)
+        }else {            navigationController?.popViewController(animated: true)
         }
     }
     
+    }
 
+       
+    
 }
