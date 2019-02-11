@@ -31,10 +31,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="toDoFieldChange:" destination="d3D-Ry-hDu" eventType="editingChanged" id="PcF-Oo-wPi"/>
-                                    <action selector="toDoFieldChange:" destination="d3D-Ry-hDu" eventType="editingDidEnd" id="ryb-nK-5wN"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-xu-laE">
                                 <rect key="frame" x="16" y="200" width="343" height="30"/>
@@ -55,11 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="jXd-Oj-W7X"/>
                     </view>
                     <navigationItem key="navigationItem" id="zkD-KY-Hmn">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="JgF-vF-3lF">
-                            <connections>
-                                <action selector="cancelPressed:" destination="d3D-Ry-hDu" id="Lmt-ti-GQb"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="JgF-vF-3lF"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Kcq-G2-O1H">
                             <connections>
                                 <segue destination="X60-pK-DzP" kind="unwind" identifier="UnwindFromSave" unwindAction="unwindFromDetailViewControllerWithSegue:" id="Azh-Nr-00A"/>
@@ -69,6 +61,7 @@
                     <connections>
                         <outlet property="saveBarButton" destination="Kcq-G2-O1H" id="GOY-cV-3ns"/>
                         <outlet property="toDoField" destination="7H7-Eo-h60" id="Smi-qn-E0L"/>
+                        <outlet property="toDoNoteView" destination="5HV-xA-qfc" id="Xad-4T-vJ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rV8-Nl-EI2" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var toDoField: UITextField!
     @IBOutlet weak var toDoNoteView: UITextView!
@@ -26,17 +26,17 @@ class DetailViewController: UIViewController {
         }else {
             self.navigationItem.title = "New To Do Item"
         }
-            
+        
         
         if let toDoNoteItem = toDoNoteItem {
             toDoNoteView.text = toDoNoteItem
         }
         
         enableDisableSaveButton()
-       toDoField.becomeFirstResponder()
+        toDoField.becomeFirstResponder()
         
         
-
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UnwindFromSave"{
@@ -51,7 +51,7 @@ class DetailViewController: UIViewController {
         } else {
             saveBarButton.isEnabled = false
         }
-    
+    }
     
     @IBAction func toDoFieldChange(_ sender: UITextField) {
         enableDisableSaveButton()
@@ -65,8 +65,8 @@ class DetailViewController: UIViewController {
         }
     }
     
-    }
-
-       
-    
 }
+
+
+
+
